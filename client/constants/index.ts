@@ -18,10 +18,10 @@ export const CATEGORIES = [
 ];
 
 export const PROFILE_MENU = [
-    { id: 1, title: "My Orders", icon: "receipt-outline", route: "/orders" },
-    { id: 2, title: "Shipping Addresses", icon: "location-outline", route: "/addresses" },
-    { id: 4, title: "My Reviews", icon: "star-outline", route: "/reviews" },
-    { id: 5, title: "Settings", icon: "settings-outline", route: "/settings" },
+    { id: 1, title: "My Orders", icon: "receipt", route: "/orders", bg: "bg-blue-50", color: "#3B82F6" },
+    { id: 2, title: "Shipping Addresses", icon: "location", route: "/addresses", bg: "bg-emerald-50", color: "#10B981" },
+    { id: 4, title: "My Reviews", icon: "star", route: "/reviews", bg: "bg-amber-50", color: "#F59E0B" },
+    { id: 5, title: "Settings", icon: "settings", route: "/settings", bg: "bg-purple-50", color: "#8B5CF6" },
 ];
 
 export const getStatusColor = (status: string) => {
