@@ -105,9 +105,10 @@ export default function ProductDetails() {
                     <TouchableOpacity 
                       key={s} 
                       onPress={() => setSelectedSize(s)}
-                      className={`h-12 w-12 rounded-full items-center justify-center border-2 ${isSelected ? 'border-primary bg-primary' : 'border-gray-200 bg-white'}`}
+                      className={`px-5 py-3 rounded-2xl items-center justify-center border ${isSelected ? 'border-primary bg-primary shadow-sm shadow-gray-400' : 'border-gray-100 bg-gray-50'}`}
+                      style={{ minWidth: 64 }}
                     >
-                      <Text className={`font-bold ${isSelected ? 'text-white' : 'text-primary'}`}>{s}</Text>
+                      <Text className={`font-bold text-base ${isSelected ? 'text-white' : 'text-primary'}`}>{s}</Text>
                     </TouchableOpacity>
                   );
                 })}
