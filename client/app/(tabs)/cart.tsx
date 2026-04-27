@@ -102,6 +102,7 @@ export default function Cart() {
         <TouchableOpacity 
           className='bg-primary w-full py-4 rounded-full flex-row justify-center items-center shadow-md shadow-gray-300'
           activeOpacity={0.8}
+          onPress={() => router.push('/checkout')}
         >
           <Text className='text-white font-bold text-lg mr-2'>Checkout</Text>
           <Ionicons name="arrow-forward" size={20} color="white" />
