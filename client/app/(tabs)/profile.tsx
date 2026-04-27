@@ -44,10 +44,10 @@ export default function Profile() {
               onPress={() => item.route !== '/' && router.push(item.route as any)}
             >
               <View className='flex-row items-center'>
-                <View className='w-10 h-10 rounded-full bg-gray-50 items-center justify-center mr-4'>
-                  <Ionicons name={item.icon as any} size={20} color={COLORS.primary} />
+                <View className={`w-10 h-10 rounded-xl items-center justify-center mr-4 ${item.bg || 'bg-gray-50'}`}>
+                  <Ionicons name={item.icon as any} size={20} color={item.color || COLORS.primary} />
                 </View>
-                <Text className='text-base font-medium text-gray-800'>{item.title}</Text>
+                <Text className='text-base font-bold text-gray-800'>{item.title}</Text>
               </View>
               <Ionicons name="chevron-forward" size={20} color={COLORS.secondary} />
             </TouchableOpacity>
