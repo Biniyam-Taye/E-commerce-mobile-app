@@ -24,13 +24,13 @@ export default function TabLayout() {
       }}
       >
         <Tabs.Screen name="index" options={
-            { tabBarIcon: ({color, focused})=><Ionicons name={focused ? 'home' : 'home-outline'} size={26} color={color} /> }} />
+            { tabBarIcon: ({color, focused})=><Ionicons name={focused ? 'home' : 'home-outline'} size={28} color={color} style={{ textShadowColor: color, textShadowRadius: 0.5, textShadowOffset: {width: 0.2, height: 0.2} }} /> }} />
         <Tabs.Screen name="cart" options={
-            { tabBarIcon: ({color, focused})=><Feather name="shopping-cart" size={26} color={color} /> }} />
+            { tabBarIcon: ({color, focused})=><Ionicons name={focused ? 'cart' : 'cart-outline'} size={28} color={color} style={{ textShadowColor: color, textShadowRadius: 0.5, textShadowOffset: {width: 0.2, height: 0.2} }} /> }} />
         <Tabs.Screen name="favorite" options={
-            { tabBarIcon: ({color, focused})=><Ionicons name={focused ? 'heart' : 'heart-outline'} size={26} color={color} /> }} />
+            { tabBarIcon: ({color, focused})=><Ionicons name={focused ? 'heart' : 'heart-outline'} size={28} color={color} style={{ textShadowColor: color, textShadowRadius: 0.5, textShadowOffset: {width: 0.2, height: 0.2} }} /> }} />
         <Tabs.Screen name="profile" options={
-            { tabBarIcon: ({color, focused})=><Ionicons name={focused ? 'person' : 'person-outline'} size={26} color={color} /> }} />
+            { tabBarIcon: ({color, focused})=><Ionicons name={focused ? 'person' : 'person-outline'} size={28} color={color} style={{ textShadowColor: color, textShadowRadius: 0.5, textShadowOffset: {width: 0.2, height: 0.2} }} /> }} />
       </Tabs>
     
   )
