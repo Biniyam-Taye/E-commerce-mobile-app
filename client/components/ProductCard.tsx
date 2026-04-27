@@ -19,7 +19,7 @@ export default function ProductCard({ product }: { product: any }) {
             className='bg-white rounded-2xl mb-4 overflow-hidden'
             style={{ width: cardWidth, elevation: 2, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.1, shadowRadius: 4 }}
             onPress={() => router.push({
-                pathname: "/(tabs)/product-details",
+                pathname: "/product-details",
                 params: { id: product._id }
             })}
         >
