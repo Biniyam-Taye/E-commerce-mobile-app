@@ -10,8 +10,8 @@ export default function Profile() {
   const router = useRouter();
 
   const user = {
-    name: "Biniyam Taye",
-    email: "biniyam.taye@example.com",
+    name: "Jon",
+    email: "jon@example.com",
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1000&auto=format&fit=crop"
   }
 
