@@ -35,7 +35,7 @@ export default function Home() {
         
         {/* Welcome & Search Section */}
         <View className="px-5 pt-2 pb-6">
-          <Text className="text-secondary text-base mb-1">Hey Jon 👋</Text>
+          <Text className="text-secondary text-base mb-1">Hey Jon</Text>
           <Text className="text-3xl font-extrabold text-primary leading-[40px] mb-6">
             Find your{"\n"}perfect style
           </Text>
