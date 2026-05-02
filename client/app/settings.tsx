@@ -46,8 +46,8 @@ export default function Settings() {
             className='w-16 h-16 rounded-full'
           />
           <View className='ml-4 flex-1'>
-            <Text className='text-xl font-extrabold text-primary'>Jon</Text>
-            <Text className='text-secondary mt-1'>jon@example.com</Text>
+            <Text className='text-xl font-extrabold text-primary'>Bini</Text>
+            <Text className='text-secondary mt-1'>bini@example.com</Text>
           </View>
           <TouchableOpacity className='w-10 h-10 bg-gray-50 rounded-full items-center justify-center'>
             <Ionicons name="pencil" size={18} color={COLORS.primary} />
