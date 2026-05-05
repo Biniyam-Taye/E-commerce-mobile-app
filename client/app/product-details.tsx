@@ -12,7 +12,7 @@ export default function ProductDetails() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { id } = useLocalSearchParams<{ id?: string }>();
-  
+
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
 
@@ -41,7 +41,7 @@ export default function ProductDetails() {
   return (
     <View className="flex-1 bg-white">
       <ScrollView className="flex-1" showsVerticalScrollIndicator={false} bounces={false}>
-        
+
         {/* Header & Image Section */}
         <View className="relative bg-gray-100" style={{ height: 450 }}>
           {activeImage ? (
@@ -53,17 +53,17 @@ export default function ProductDetails() {
           )}
 
           {/* Floating Header Actions */}
-          <View 
-            className="absolute top-0 left-0 right-0 flex-row justify-between px-4" 
+          <View
+            className="absolute top-0 left-0 right-0 flex-row justify-between px-4"
             style={{ paddingTop: Math.max(insets.top, 20) }}
           >
-            <TouchableOpacity 
-              onPress={() => router.back()} 
+            <TouchableOpacity
+              onPress={() => router.back()}
               className="w-10 h-10 bg-white/90 rounded-full items-center justify-center shadow-sm shadow-gray-300"
             >
               <Ionicons name="arrow-back" size={20} color={COLORS.primary} />
             </TouchableOpacity>
-            <TouchableOpacity 
+            <TouchableOpacity
               className="w-10 h-10 bg-white/90 rounded-full items-center justify-center shadow-sm shadow-gray-300"
             >
               <Ionicons name="heart-outline" size={20} color={COLORS.primary} />
@@ -73,7 +73,7 @@ export default function ProductDetails() {
 
         {/* Content Card (Overlaps the image) */}
         <View className="-mt-8 pt-8 px-6 bg-white rounded-t-[32px]" style={{ minHeight: 400 }}>
-          
+
           <View className="flex-row justify-between items-start mb-2">
             <Text className="text-xs font-bold text-gray-400 uppercase tracking-widest">{categoryLabel}</Text>
             <View className="flex-row items-center bg-amber-50 px-2 py-1 rounded-md">
@@ -84,7 +84,7 @@ export default function ProductDetails() {
           </View>
 
           <Text className="text-2xl font-extrabold text-primary leading-8 mb-4">{product.name}</Text>
-          
+
           <View className="flex-row items-baseline mb-6">
             <Text className="text-3xl font-extrabold text-primary">${product.price}</Text>
             {product.comparePrice ? (
@@ -102,8 +102,8 @@ export default function ProductDetails() {
                 {product.sizes.map((s) => {
                   const isSelected = selectedSize === s;
                   return (
-                    <TouchableOpacity 
-                      key={s} 
+                    <TouchableOpacity
+                      key={s}
                       onPress={() => setSelectedSize(s)}
                       className={`px-5 py-3 rounded-2xl items-center justify-center border ${isSelected ? 'border-primary bg-primary shadow-sm shadow-gray-400' : 'border-gray-100 bg-gray-50'}`}
                       style={{ minWidth: 64 }}
@@ -143,7 +143,7 @@ export default function ProductDetails() {
       </ScrollView>
 
       {/* Floating Bottom Action Bar */}
-      <View 
+      <View
         className="px-6 py-4 bg-white border-t border-gray-100 flex-row gap-4"
         style={{ paddingBottom: Math.max(insets.bottom, 16) }}
       >
@@ -152,7 +152,7 @@ export default function ProductDetails() {
           <Text className="text-primary font-bold text-base ml-2">Add to cart</Text>
         </TouchableOpacity>
         <TouchableOpacity className="flex-1 bg-primary rounded-full h-14 items-center justify-center">
-          <Text className="text-white font-bold text-base">Buy now</Text>
+          <Text className="text-white font-bold text-base">Buy no</Text>
         </TouchableOpacity>
       </View>
     </View>
