@@ -98,7 +98,7 @@ export default function Settings() {
             icon="information-circle" label="About Us" 
             bg="bg-gray-100" color="#6B7280" isLast
           />
-        </View>
+         </View>
 
       </ScrollView>
     </SafeAreaView>
