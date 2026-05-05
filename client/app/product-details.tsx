@@ -149,7 +149,7 @@ export default function ProductDetails() {
       >
         <TouchableOpacity className="flex-1 bg-gray-100 rounded-full h-14 items-center justify-center flex-row">
           <Ionicons name="cart-outline" size={20} color={COLORS.primary} />
-          <Text className="text-primary font-bold text-base ml-2">Add to ca</Text>
+          <Text className="text-primary font-bold text-base ml-2">Add to cart</Text>
         </TouchableOpacity>
         <TouchableOpacity className="flex-1 bg-primary rounded-full h-14 items-center justify-center">
           <Text className="text-white font-bold text-base">Buy now</Text>
