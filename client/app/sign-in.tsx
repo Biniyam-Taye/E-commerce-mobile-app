@@ -6,37 +6,29 @@ import { COLORS } from '@/constants'
 import { useRouter } from 'expo-router'
 import { supabase } from '@/lib/supabase'
 
-export default function SignUp() {
+export default function SignIn() {
   const router = useRouter();
-  const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSignUp = async () => {
-    if (!email || !password || !fullName) {
+  const handleSignIn = async () => {
+    if (!email || !password) {
       Alert.alert('Error', 'Please fill in all fields');
       return;
     }
     setLoading(true);
-    const { data, error } = await supabase.auth.signUp({
+    const { error } = await supabase.auth.signInWithPassword({
       email,
       password,
-      options: {
-        data: {
-          full_name: fullName,
-        }
-      }
     });
     setLoading(false);
     
     if (error) {
-      Alert.alert('Sign Up Failed', error.message);
+      Alert.alert('Sign In Failed', error.message);
     } else {
-      Alert.alert('Success', 'Please check your email to verify your account.', [
-        { text: 'OK', onPress: () => router.push('/sign-in') }
-      ]);
+      router.replace('/(tabs)');
     }
   };
 
@@ -57,29 +49,13 @@ export default function SignUp() {
               <Ionicons name="arrow-back" size={20} color={COLORS.primary} />
             </TouchableOpacity>
             
-            <Text className='text-3xl font-extrabold text-primary mb-2'>Create Account</Text>
-            <Text className='text-secondary text-base'>Sign up to get started with your new shopping journey.</Text>
+            <Text className='text-3xl font-extrabold text-primary mb-2'>Welcome Back</Text>
+            <Text className='text-secondary text-base'>Sign in to continue your shopping journey.</Text>
           </View>
 
           {/* Form */}
           <View className='flex-col gap-4'>
             
-            {/* Full Name */}
-            <View>
-              <Text className='text-sm font-bold text-primary mb-2 ml-1'>Full Name</Text>
-              <View className='flex-row items-center bg-gray-50 border border-gray-100 rounded-2xl px-4 h-14'>
-                <Ionicons name="person-outline" size={20} color={COLORS.secondary} />
-                <TextInput 
-                  placeholder="John Doe"
-                  placeholderTextColor="#9CA3AF"
-                  className='flex-1 ml-3 text-primary font-medium'
-                  autoCapitalize="words"
-                  value={fullName}
-                  onChangeText={setFullName}
-                />
-              </View>
-            </View>
-
             {/* Email */}
             <View>
               <Text className='text-sm font-bold text-primary mb-2 ml-1'>Email Address</Text>
@@ -118,30 +94,24 @@ export default function SignUp() {
 
           </View>
 
-          {/* Terms & Conditions */}
-          <View className='flex-row items-center mt-6 pr-4'>
-            <View className='w-5 h-5 rounded border-2 border-primary items-center justify-center mr-3'>
-              <View className='w-2.5 h-2.5 bg-primary rounded-sm' />
-            </View>
-            <Text className='text-secondary text-sm leading-5'>
-              I agree to the <Text className='font-bold text-primary'>Terms of Service</Text> and <Text className='font-bold text-primary'>Privacy Policy</Text>
-            </Text>
-          </View>
+          <TouchableOpacity className="mt-4 items-end">
+            <Text className="text-primary font-bold">Forgot Password?</Text>
+          </TouchableOpacity>
 
-          {/* Sign Up Button */}
+          {/* Sign In Button */}
           <TouchableOpacity 
             className={`w-full py-4 rounded-full items-center justify-center mt-8 shadow-md shadow-gray-300 ${loading ? 'bg-gray-400' : 'bg-primary'}`}
             activeOpacity={0.8}
-            onPress={handleSignUp}
+            onPress={handleSignIn}
             disabled={loading}
           >
-            <Text className='text-white font-bold text-lg'>{loading ? 'Signing Up...' : 'Sign Up'}</Text>
+            <Text className='text-white font-bold text-lg'>{loading ? 'Signing in...' : 'Sign In'}</Text>
           </TouchableOpacity>
 
           {/* Divider */}
           <View className='flex-row items-center my-8'>
             <View className='flex-1 h-[1px] bg-gray-200' />
-            <Text className='mx-4 text-gray-400 font-medium'>Or sign up with</Text>
+            <Text className='mx-4 text-gray-400 font-medium'>Or sign in with</Text>
             <View className='flex-1 h-[1px] bg-gray-200' />
           </View>
 
@@ -158,11 +128,11 @@ export default function SignUp() {
             </TouchableOpacity>
           </View>
 
-          {/* Login Link */}
+          {/* Sign Up Link */}
           <View className='flex-row justify-center items-center mb-10'>
-            <Text className='text-secondary'>Already have an account? </Text>
-            <TouchableOpacity onPress={() => router.push('/sign-in')}>
-              <Text className='text-primary font-bold'>Sign In</Text>
+            <Text className='text-secondary'>Don't have an account? </Text>
+            <TouchableOpacity onPress={() => router.push('/sign-up')}>
+              <Text className='text-primary font-bold'>Sign Up</Text>
             </TouchableOpacity>
           </View>
 
