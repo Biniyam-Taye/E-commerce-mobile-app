@@ -152,7 +152,7 @@ export default function ProductDetails() {
           <Text className="text-primary font-bold text-base ml-2">Add to cart</Text>
         </TouchableOpacity>
         <TouchableOpacity className="flex-1 bg-primary rounded-full h-14 items-center justify-center">
-          <Text className="text-white font-bold text-base">Buy Now</Text>
+          <Text className="text-white font-bold text-base">Buy now</Text>
         </TouchableOpacity>
       </View>
     </View>
