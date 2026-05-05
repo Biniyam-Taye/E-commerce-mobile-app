@@ -119,7 +119,7 @@ export default function ProductDetails() {
           {/* Image Gallery Thumbnails */}
           {images.length > 1 && (
             <View className="mb-8">
-              <Text className="text-primary font-bold text-base mb-">Gallery</Text>
+              <Text className="text-primary font-bold text-base mb-4">Gallery</Text>
               <ScrollView horizontal showsHorizontalScrollIndicator={false} className="-mx-2 px-2">
                 {images.map((img, idx) => {
                   const isActive = idx === activeImageIndex;
