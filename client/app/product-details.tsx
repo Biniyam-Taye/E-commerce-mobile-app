@@ -34,7 +34,7 @@ export default function ProductDetails() {
     );
   }
 
-  const categoryLabel = typeof product.category === "string" ? product.category : product.category?.name;
+  const categoryLabel = typeof product.category === "string" ? product.category : (product.category as any)?.name;
   const images = product.images?.length ? product.images : [];
   const activeImage = images[activeImageIndex] ?? images[0];
 
@@ -78,8 +78,8 @@ export default function ProductDetails() {
             <Text className="text-xs font-bold text-gray-400 uppercase tracking-widest">{categoryLabel}</Text>
             <View className="flex-row items-center bg-amber-50 px-2 py-1 rounded-md">
               <Ionicons name="star" size={14} color="#F59E0B" />
-              <Text className="text-xs font-bold text-amber-600 ml-1">{product.ratings.average}</Text>
-              <Text className="text-xs text-amber-600/60 ml-1">({product.ratings.count})</Text>
+              <Text className="text-xs font-bold text-amber-600 ml-1">{product.ratings?.average ?? 0}</Text>
+              <Text className="text-xs text-amber-600/60 ml-1">({product.ratings?.count ?? 0})</Text>
             </View>
           </View>
 
@@ -125,7 +125,7 @@ export default function ProductDetails() {
                   const isActive = idx === activeImageIndex;
                   return (
                     <TouchableOpacity
-                      key={`${product._id}_${idx}`}
+                      key={`gallery_${idx}`}
                       onPress={() => setActiveImageIndex(idx)}
                       className={`mx-2 rounded-2xl overflow-hidden border-2 ${isActive ? "border-primary" : "border-transparent"}`}
                       style={{ width: 70, height: 70 }}
@@ -148,7 +148,7 @@ export default function ProductDetails() {
         style={{ paddingBottom: Math.max(insets.bottom, 16) }}
       >
         <TouchableOpacity className="flex-1 bg-gray-100 rounded-full h-14 items-center justify-center flex-row">
-          <Ionicons name="cart-outline" size={20} color={COLORS.primary} className="mr-2" />
+          <Ionicons name="cart-outline" size={20} color={COLORS.primary} />
           <Text className="text-primary font-bold text-base ml-2">Add to cart</Text>
         </TouchableOpacity>
         <TouchableOpacity className="flex-1 bg-primary rounded-full h-14 items-center justify-center">
