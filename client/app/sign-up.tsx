@@ -104,7 +104,7 @@ export default function SignUp() {
                 <Ionicons name="lock-closed-outline" size={20} color={COLORS.secondary} />
                 <TextInput 
                   placeholder="••••••••"
-                  placeholderTextColor="#9CA3AF"
+                  placeholderTextColor="#9CA3A"
                   className='flex-1 ml-3 text-primary font-medium'
                   secureTextEntry={!showPassword}
                   value={password}
@@ -160,7 +160,7 @@ export default function SignUp() {
 
           {/* Login Link */}
           <View className='flex-row justify-center items-center mb-10'>
-            <Text className='text-secondary'>Already have an account?? </Text>
+            <Text className='text-secondary'>Already have an account?</Text>
             <TouchableOpacity onPress={() => router.push('/sign-in')}>
               <Text className='text-primary font-bold'>Sign In</Text>
             </TouchableOpacity>
