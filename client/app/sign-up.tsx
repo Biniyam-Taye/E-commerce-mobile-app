@@ -103,7 +103,7 @@ export default function SignUp() {
               <View className='flex-row items-center bg-gray-50 border border-gray-100 rounded-2xl px-4 h-14'>
                 <Ionicons name="lock-closed-outline" size={20} color={COLORS.secondary} />
                 <TextInput 
-                  placeholder="••••••••"
+                  placeholder="•••••••"
                   placeholderTextColor="#9CA3AF"
                   className='flex-1 ml-3 text-primary font-medium'
                   secureTextEntry={!showPassword}
