@@ -100,7 +100,7 @@ export default function Checkout() {
             <Text className='font-medium text-primary'>${shipping.toFixed(2)}</Text>
           </View>
           
-          <View className='h-[1px] bg-gray-100 my-3' />
+          <View className='h-[1px] bg-gray-100 my-2' />
           
           <View className='flex-row justify-between items-center'>
             <Text className='text-base font-bold text-primary'>Total Amount</Text>
