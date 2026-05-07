@@ -49,7 +49,7 @@ export default function Checkout() {
               <Text className='font-bold text-primary text-base mb-1'>Home</Text>
               <Text className='text-secondary leading-5'>
                 1234 Main Street, Apt 4B{"\n"}
-                New York, NY 10001
+                New York, NY 1000
               </Text>
               <Text className='text-secondary mt-1'>+1 (555) 123-4567</Text>
             </View>
