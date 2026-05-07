@@ -160,7 +160,7 @@ export default function SignUp() {
 
           {/* Login Link */}
           <View className='flex-row justify-center items-center mb-10'>
-            <Text className='text-secondary'>Already have an account? </Text>
+            <Text className='text-secondary'>Already have an account?? </Text>
             <TouchableOpacity onPress={() => router.push('/sign-in')}>
               <Text className='text-primary font-bold'>Sign In</Text>
             </TouchableOpacity>
