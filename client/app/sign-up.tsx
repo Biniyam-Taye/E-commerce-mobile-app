@@ -104,7 +104,7 @@ export default function SignUp() {
                 <Ionicons name="lock-closed-outline" size={20} color={COLORS.secondary} />
                 <TextInput 
                   placeholder="••••••••"
-                  placeholderTextColor="#9CA3A"
+                  placeholderTextColor="#9CA3AF"
                   className='flex-1 ml-3 text-primary font-medium'
                   secureTextEntry={!showPassword}
                   value={password}
