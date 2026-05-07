@@ -58,7 +58,7 @@ export default function SignUp() {
             </TouchableOpacity>
             
             <Text className='text-3xl font-extrabold text-primary mb-2'>Create Account</Text>
-            <Text className='text-secondary text-base'>Sign up to get started with your new shopping journey.</Text>
+            <Text className='text-secondary text-base'>Sign up to get started with your new shopping journey</Text>
           </View>
 
           {/* Form */}
