@@ -148,7 +148,7 @@ export default function SignUp() {
           {/* Social Logins */}
           <View className='flex-row justify-center gap-4 mb-8'>
             <TouchableOpacity className='w-16 h-16 rounded-2xl border border-gray-200 items-center justify-center bg-white shadow-sm shadow-gray-100'>
-              <Ionicons name="logo-google" size={24} color="#DB443" />
+              <Ionicons name="logo-google" size={24} color="#DB4437" />
             </TouchableOpacity>
             <TouchableOpacity className='w-16 h-16 rounded-2xl border border-gray-200 items-center justify-center bg-white shadow-sm shadow-gray-100'>
               <Ionicons name="logo-apple" size={24} color="#000000" />
