@@ -112,7 +112,7 @@ export default function Checkout() {
       </ScrollView>
 
       {/* Place Order Button */}
-      <View className='px-4 py-4 bg-white border-t border-gray-100 pb-8'>
+      <View className='px-4 py-4 bg-white border-t border-gray-100 pb-7'>
         <TouchableOpacity 
           className='bg-primary w-full py-4 rounded-full flex-row justify-center items-center shadow-md shadow-gray-300'
           activeOpacity={0.8}
