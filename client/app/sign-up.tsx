@@ -66,7 +66,7 @@ export default function SignUp() {
             
             {/* Full Name */}
             <View>
-              <Text className='text-sm font-bold text-primary mb-2 ml-1'>Full Name</Text>
+              <Text className='text-sm font-bold text-primary mb-2 ml-1'>Full Nam</Text>
               <View className='flex-row items-center bg-gray-50 border border-gray-100 rounded-2xl px-4 h-14'>
                 <Ionicons name="person-outline" size={20} color={COLORS.secondary} />
                 <TextInput 
