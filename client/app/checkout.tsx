@@ -118,7 +118,7 @@ export default function Checkout() {
           activeOpacity={0.8}
           onPress={handlePlaceOrder}
         >
-          <Text className='text-white font-bold text-lg mr-2'>Place Orde</Text>
+          <Text className='text-white font-bold text-lg mr-2'>Place Order</Text>
           <Ionicons name="checkmark-circle" size={20} color="white" />
         </TouchableOpacity>
       </View>
